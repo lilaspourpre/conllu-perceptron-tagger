@@ -9,7 +9,7 @@ baseline - 'i tag+i-2 tag' | 96,42 | 95,67 |
 baseline + 'word len' | 96,46 | 95,77 |
 baseline + 'word bigrams' | 96,53 | 95,88 |
 baseline + 'word bigrams' + 'word len' | 96,53 | 95,84 |
-baseline + 'word trigrams' | 2 | 2 |
+**baseline + 'word trigrams'** | **96,66** | **96,01** |
 
 # conllu-perceptron-tagger
 
@@ -38,3 +38,4 @@ Predict:
 ```
 cat kk-ud-test.conllu | python3 tagger.py model.dat > output
 ```
+ә
