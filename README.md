@@ -9,7 +9,8 @@ baseline - 'i tag+i-2 tag' | 96,42 | 95,67 |
 baseline + 'word len' | 96,46 | 95,77 |
 baseline + 'word bigrams' | 96,53 | 95,88 |
 baseline + 'word bigrams' + 'word len' | 96,53 | 95,84 |
-**baseline + 'word trigrams'** | **96,66** | **96,01** |
+baseline + 'word trigrams' | 96,66 | 96,01 |
+**baseline + 'word trigrams' + 'word len'** | **96,68** | **96,11** |
 
 # conllu-perceptron-tagger
 
