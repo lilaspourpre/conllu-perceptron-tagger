@@ -4,6 +4,7 @@ import sys
 import random
 from collections import defaultdict
 import pickle
+from nltk import ngrams
 
 from perceptron import AveragedPerceptron
 
@@ -157,7 +158,7 @@ class PerceptronTagger():
 		trained.
 		'''
 		def add(name, *args):
-			features[' '.join((name,) + tuple(args))] += 1
+			features[' '.join((name,) + tuple(str(i) for i in args))] += 1
 
 		i += len(self.START)
 		features = defaultdict(int)
@@ -176,6 +177,26 @@ class PerceptronTagger():
 		add('i+1 word', context[i+1])
 		add('i+1 suffix', context[i+1][-3:])
 		add('i+2 word', context[i+2])
+		
+		#------------------------------
+		# New useful features
+		#------------------------------
+		
+		for ngram in ngrams(context[i],3):
+			add('ngram-'+"".join(ngram), "".join(ngram))
+		add('i len', len(context[i]))
+			
+		#------------------------------
+		# Useless features
+		#------------------------------
+		
+		#add('i-1 prefix', context[i-1][0])
+		#for ngram in ngrams(context[i],2):
+		#	add('ngram'+"".join(ngram), "".join(ngram))
+		#add('i-2 suffix', context[i-2][-3:])
+		#add('i-1 len', len(context[i-1]))
+		#add('i+1 len', len(context[i+1]))
+		#add('i+2 suffix', context[i+2][-3:])
 		#print(word, '|||', features)
 		return features
 
