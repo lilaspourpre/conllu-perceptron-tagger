@@ -4,6 +4,8 @@ F1 | devset | testset |
 --- | --- | --- | 
 baseline | 96,42 | 95,71 |
 baseline - 'i tag+i-2 tag' | 96,42 | 95,67 |
+baseline + 'word len' |  | 95, |
+baseline + 'word bigrams' |  | 95,88 |
 
 # conllu-perceptron-tagger
 
