@@ -6,11 +6,17 @@ method | devset | testset |
 --- | --- | --- | 
 baseline | 96,42 | 95,71 |
 baseline - 'i tag+i-2 tag' | 96,42 | 95,67 |
-baseline + 'word len' | 96,46 | 95,77 |
-baseline + 'word bigrams' | 96,53 | 95,88 |
-baseline + 'word bigrams' + 'word len' | 96,53 | 95,84 |
-baseline + 'word trigrams' | 96,66 | 96,01 |
-**baseline + 'word trigrams' + 'word len'** | **96,68** | **96,11** |
+baseline + 'i len' | 96,46 | 95,77 |
+baseline + 'i bigrams' | 96,53 | 95,88 |
+baseline + 'i bigrams' + 'word len' | 96,53 | 95,84 |
+baseline + 'i trigrams' | 96,66 | 96,01 |
+**baseline + 'i trigrams' + 'word len'** | **96,68** | **96,11** |
+
+The following methods reduce F1 measure:
+* baseline + 'i-1 len + i len + i+1 len'
+* baseline + 'i-1 prefix'
+* baseline + 'i+2 suffix'
+* baseline + 'i-2 suffix'
 
 # conllu-perceptron-tagger
 
