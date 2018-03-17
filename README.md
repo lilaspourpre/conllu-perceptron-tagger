@@ -1,3 +1,10 @@
+## improve results on devset and testset on French CONNLU
+
+F1 | devset | testset | 
+--- | --- | --- | 
+baseline | 96,42 | 95,71 |
+
+
 # conllu-perceptron-tagger
 
 A (very) simple perceptron tagger for CoNLL-U files, intended for use as a teaching
