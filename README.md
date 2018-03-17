@@ -1,11 +1,13 @@
 ## improve results on devset and testset on French CONNLU
 
-F1 | devset | testset | 
+F1 measure
+
+method | devset | testset | 
 --- | --- | --- | 
 baseline | 96,42 | 95,71 |
 baseline - 'i tag+i-2 tag' | 96,42 | 95,67 |
-baseline + 'word len' |  | 95, |
-baseline + 'word bigrams' |  | 95,88 |
+baseline + 'word len' | 96,46 | 95,77 |
+baseline + 'word bigrams' | 96,53 | 95,88 |
 
 # conllu-perceptron-tagger
 
